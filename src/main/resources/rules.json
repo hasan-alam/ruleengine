@@ -1,0 +1,46 @@
+[
+  {
+    "condition": "cardBrand == 'Visa' && amount > 10000",
+    "actions": [
+      { "type": "SMS", "recipient": "CardHolder" },
+      { "type": "EMAIL", "recipient": "Merchant" }
+    ]
+  },
+  {
+    "condition": "cardBrand == 'MCI' && amount > 15000",
+    "actions": [
+      { "type": "EMAIL", "recipient": "FraudOfficer" },
+      { "type": "BLOCK_CARD", "recipient": "" }
+    ]
+  },
+  {
+    "condition": "amount > 50000",
+    "actions": [
+      { "type": "BLOCK_MERCHANT", "recipient": "Merchant" },
+      { "type": "BLOCK_TERMINAL", "recipient": "" },
+      { "type": "INCREASE_FRAUD_SCORE", "recipient": "" }
+    ]
+  },
+  {
+    "condition": "cardBrand == 'DCI' && amount > cardLimit * 0.40",
+    "actions": [
+      { "type": "SMS", "recipient": "FraudOfficer" },
+      { "type": "EMAIL", "recipient": "FraudOfficer" },
+      {"type": "INCREASE_FRAUD_SCORE", "recipient": ""}
+    ]
+  },
+  {
+    "condition": "cardNumber.startsWith('432155') && amount > cardLimit * 0.50",
+    "actions": [
+      { "type": "SMS", "recipient": "FraudOfficer" },
+      { "type": "EMAIL", "recipient": "FraudOfficer" },
+      {"type": "BLOCK_CARD", "recipient": ""}
+    ]
+  },
+  {
+    "condition": "isBadCard(cardNumber)",
+    "actions": [
+      {"type": "BLOCK_CARD", "recipient": ""}
+    ]
+  }
+]
