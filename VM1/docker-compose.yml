@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  rule-engine:
+    image: rule-engine:v1
+    container_name: rule-engine
+    restart: always
+    volumes:
+      - ./libs/opentelemetry-javaagent.jar:/app/libs/opentelemetry-javaagent-2.11.0.jar
+    ports:
+      - "8080:8080"
+    logging:
+      driver: loki
+      options:
+        loki-url: "http://192.168.140.136:3100/loki/api/v1/push"
+    networks:
+      - frm-net
+    environment:
+      - JAVA_TOOL_OPTIONS=-javaagent:/app/libs/opentelemetry-javaagent-2.11.0.jar
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://tempo:4318
+      - OTEL_METRICS_EXPORTER=none
+      - OTEL_SERVICE_NAME=rule-engine
+  prometheus-agent:
+    image: prom/prometheus
+    container_name: prometheus-agent
+    restart: always
+    volumes:
+      - ./prometheus-agent-config.yml:/etc/prometheus/prometheus.yml
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--web.enable-lifecycle'
+    ports:
+      - "9091:9090"
+    networks:
+      - frm-net
+  tempo:
+    image: grafana/tempo:2.6.1
+    container_name: tempo
+    command: -config.file /etc/tempo-config.yml
+    ports:
+      - "3110:3100"
+      - "4318:4318"
+    volumes:
+      - ./tempo.yml:/etc/tempo-config.yml
+    networks:
+      - frm-net
+networks:
+  frm-net:
+    driver: bridge
+

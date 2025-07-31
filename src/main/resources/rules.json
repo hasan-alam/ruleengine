@@ -1,5 +1,45 @@
 [
   {
+    "condition": "isTrmAppTypeAmtExceeded(25000,300)",
+    "actions": [
+      { "type": "SMS", "recipient": "CardHolder" },
+      { "type": "EMAIL", "recipient": "Merchant" }
+    ]
+  },
+  {
+    "condition": "isCardAppTypeAmtExceededForMcc(25000,300)",
+    "actions": [
+      { "type": "SMS", "recipient": "CardHolder" },
+      { "type": "EMAIL", "recipient": "Merchant" }
+    ]
+  },
+  {
+    "condition": "billAmount > 50000",
+    "actions": [
+      { "type": "SMS", "recipient": "CardHolder", "score": 0  },
+      { "type": "EMAIL", "recipient": "Merchant", "score": 0  },
+      { "type": "BLOCK_MERCHANT", "recipient": "", "score": 0 },
+      { "type": "BLOCK_TERMINAL", "recipient": "", "score": 0  },
+      { "type": "BLOCK_CARD", "recipient": "", "score": 0  },
+      { "type": "INCREASE_FRAUD_SCORE", "recipient": "", "score":5 }
+    ]
+  },
+  {
+    "condition": "billAmount >= 50000 && billAmount <= 80000",
+    "actions": [
+      { "type": "BLOCK_MERCHANT", "recipient": "Merchant" },
+      { "type": "BLOCK_TERMINAL", "recipient": "" },
+      { "type": "INCREASE_FRAUD_SCORE", "recipient": "" }
+    ]
+  },
+  {
+    "condition": "acquirerID != '4566' || acquirerID == '4444'",
+    "actions": [
+      { "type": "SMS", "recipient": "CardHolder" },
+      { "type": "EMAIL", "recipient": "Merchant" }
+    ]
+  },
+  {
     "condition": "cardBrand == 'Visa' && amount > 10000",
     "actions": [
       { "type": "SMS", "recipient": "CardHolder" },

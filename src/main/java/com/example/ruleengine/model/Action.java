@@ -10,5 +10,6 @@ import lombok.NoArgsConstructor;
 public class Action {
     private String type;
     private String recipient;
+    private int score;
 }
 

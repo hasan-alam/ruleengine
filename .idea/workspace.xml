@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1573ca00-b502-498f-9a32-17297c5bf651" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_core_1_14_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_jakarta9_1_14_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_registry_prometheus_1_14_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_opentelemetry_javaagent_opentelemetry_javaagent_2_11_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_prometheus_prometheus_metrics_config_1_3_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_prometheus_prometheus_metrics_core_1_3_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_prometheus_prometheus_metrics_exposition_formats_1_3_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_prometheus_prometheus_metrics_exposition_textformats_1_3_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_prometheus_prometheus_metrics_model_1_3_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_prometheus_prometheus_metrics_tracer_common_1_3_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hdrhistogram_HdrHistogram_2_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_latencyutils_LatencyUtils_2_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_3_4_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_autoconfigure_3_4_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_3_4_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VM1/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VM1/libs/opentelemetry-javaagent.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VM1/prometheus-agent-config.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VM1/tempo.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rule-engine.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rule-engine.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/controller/PurchaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/controller/PurchaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/entity/CardScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/entity/CardScore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/entity/MerchantScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/entity/MerchantScore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/entity/RuleActionEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/entity/RuleActionEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/entity/RuleEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/entity/RuleEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/entity/RuleHitEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/entity/RuleHitEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/entity/TrxEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/entity/TrxEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/model/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/model/Action.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/model/Purchase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/model/Purchase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/repository/CardScoreRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/repository/CardScoreRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/repository/MerchantScoreRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/repository/MerchantScoreRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/repository/RuleActionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/repository/RuleActionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/repository/RuleHitRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/repository/RuleHitRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/repository/RuleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/repository/RuleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/repository/TransactionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/repository/TransactionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/service/ActionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/service/ActionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/service/MethodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/service/MethodService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/service/RuleEngineService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ruleengine/service/RuleEngineService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/rules.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rules.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2scRciVBxLEFlJQF8CELxTZprC3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "D:/Learning/Projects/rule-engine/rule-engine/Docker compose",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Java"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Learning\Projects\rule-engine\rule-engine\Docker compose" />
+      <recent name="D:\Learning\Projects\rule-engine\rule-engine\Docker compose\libs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Learning\Projects\rule-engine\rule-engine\Docker compose" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="RuleEngineApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.ruleengine.RuleEngineApplication" />
+      <module name="rule-engine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.ruleengine.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.RuleEngineApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1573ca00-b502-498f-9a32-17297c5bf651" name="Changes" comment="" />
+      <created>1738752958611</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1738752958611</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
