@@ -23,9 +23,19 @@ public class RuleEntity {
     private String ruleDesc;
     @NotEmpty
     @Length(max =1500)
+    @Column(columnDefinition = "TEXT")
+    @Lob
     private String ruleJson;
     private boolean active;
     private String modifiedBy;
     private String lastUpdated;
-    private String trxType; //ACQ, ISS, BOTH
+    private String trxType; //ACQ, ISS, BOTH (in UI, make it Transaction Source)
+    private String createdBy;
+    private String creationDateTime;
+    private String cardBrand;//Any,VISA, MCI, DCI,Amex, JCI
+    private String cardType; //Any, Credit Card, Debit Card, Pre-Paid Card
+    private String effectiveFromDate; //YYYYMMDD
+    private String effectiveEndDate; //YYYYMMDD
+    private String transactionChannel; //Any, QR,POS,ATM,NPSB, VISA, MCI, DCI
+    private String priority;
 }

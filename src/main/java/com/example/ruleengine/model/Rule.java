@@ -10,7 +10,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Rule {
-    private String condition;
+    private String conditions;
     private List<Action> actions;
 }
 

@@ -53,18 +53,18 @@ public class RuleEngineService {
                 System.out.println(rule.getRuleJson());
                 ObjectMapper mapper = new ObjectMapper();
                 Rule spelRule = mapper.readValue(rule.getRuleJson(), Rule.class);
-                log.info("Condition: " + spelRule.getCondition());
+                log.info("Condition: " + spelRule.getConditions());
                 for (Action action : spelRule.getActions()) {
                     log.info("Action Type: " + action.getType() + ", Recipient: " + action.getRecipient());
                 }
                 log.info("purchase.getTrxnType()="+purchase.getTrxnType()
                         +",rule.getTrxType()="+rule.getTrxType());
                 if(rule.getTrxType().equals("BOTH") || rule.getTrxType().equals(purchase.getTrxnType())) {
-                    Expression expression = parser.parseExpression(spelRule.getCondition());
+                    Expression expression = parser.parseExpression(spelRule.getConditions());
                     //Boolean result = expression.getValue(purchase, Boolean.class);
                     Boolean result = expression.getValue(context, Boolean.class);
                     if (Boolean.TRUE.equals(result)) {
-                        log.info("Rule:" + rule.getRuleTitle() + " hit");
+                        log.info("Rule: " + rule.getRuleTitle() + " triggered");
                         RuleHitEntity ruleHitEntity = new RuleHitEntity();
                         ruleHitEntity.setTrxEntity(trxEntity);
                         ruleHitEntity.setRuleEntity(rule);
@@ -73,6 +73,8 @@ public class RuleEngineService {
                             log.info("Taking Action:" + action.getType());
                             actionService.executeAction(rule,trxEntity,action, purchase);
                         }
+                    } else {
+                        log.info("Rule: " + rule.getRuleTitle() + " NOT triggered");
                     }
                 } else {
                     log.info("Trx type not matched:purchase.getTrxnType()="+purchase.getTrxnType()

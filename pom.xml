@@ -29,7 +29,9 @@
 	<properties>
 		<java.version>17</java.version>
 		<otelVersion>2.11.0</otelVersion>
+		<spring.cloud.version>2024.0.1</spring.cloud.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -89,8 +91,30 @@
 			<scope>runtime</scope>
 		</dependency>
 		<!--Open telemetry dependency [E]-->
-	</dependencies>
 
+		<!--Spring cloud stream dependencies for Messaging with RabbitMQ [S]-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-stream</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-stream-binder-rabbit</artifactId>
+		</dependency>
+		<!--Spring cloud stream dependencies for Messaging with RabbitMQ [E]-->
+
+	</dependencies>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 	<build>
 		<plugins>
 			<plugin>

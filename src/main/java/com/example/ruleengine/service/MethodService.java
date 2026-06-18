@@ -27,7 +27,7 @@ public class MethodService {
 
     private final TransactionRepository transactionRepository;
 
-    public boolean isCardRiskScoreGte(Purchase purchase, int score) {
+    public boolean cardRiskScoreGreaterThanEqual(Purchase purchase, int score) {
         log.info("Evaluating isCardRiskScoreGte for score>=" + score + " for card:" + purchase.getCardNumber());
         Optional<CardScore> cardScore = cardScoreRepository.findById(purchase.getCardNumber());
         if (cardScore.isPresent()) {
@@ -37,7 +37,7 @@ public class MethodService {
         return false;
     }
 
-    public boolean isMerchantRiskScoreGte(Purchase purchase, int score) {
+    public boolean merchantRiskScoreGreaterThanEqual(Purchase purchase, int score) {
         log.info("Evaluating isMerchantRiskScoreGte for score>=" + score + " for merchant:" + purchase.getMercID());
         Optional<MerchantScore> merchantScore = merchantScoreRepository.findById(purchase.getMercID());
         if (merchantScore.isPresent()) {
@@ -56,7 +56,7 @@ public class MethodService {
         LocalTime currentTime = LocalTime.parse(currentTimeHHMMSS, timeFormatter);
 
 // minus 10 minutes
-        LocalTime startTime = currentTime.minusMinutes(10);
+        LocalTime startTime = currentTime.minusMinutes(minutes);
 
 // back to HHMMSS string
         String startTimeHHMMSS = startTime.format(timeFormatter);

@@ -20,6 +20,7 @@ services:
       - OTEL_EXPORTER_OTLP_ENDPOINT=http://tempo:4318
       - OTEL_METRICS_EXPORTER=none
       - OTEL_SERVICE_NAME=rule-engine
+      - DB_PASSWORD=${DB_PASSWORD}
   prometheus-agent:
     image: prom/prometheus
     container_name: prometheus-agent
